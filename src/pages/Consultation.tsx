@@ -2,10 +2,38 @@ import React from 'react';
 import { Calendar, Clock, Video, MessageSquare } from 'lucide-react';
 
 const Consultation = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    const formData = {
+      name: (document.getElementById('name') as HTMLInputElement).value,
+      email: (document.getElementById('email') as HTMLInputElement).value,
+      phone: (document.getElementById('phone') as HTMLInputElement).value,
+      company: (document.getElementById('company') as HTMLInputElement).value,
+      service: (document.getElementById('service') as HTMLSelectElement).value,
+      message: (document.getElementById('message') as HTMLTextAreaElement).value,
+      consultationType: (document.getElementById('consultation-type') as HTMLSelectElement).value,
+    };
+  
+    try {
+      const response = await fetch('http://localhost:5000/api/consultation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+  
+      if (response.ok) {
+        alert('Form Submitted');
+        window.location.reload(); // Refresh the page
+      } else {
+        alert('Failed to submit. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
+  
 
   return (
     <div className="py-12">
@@ -104,7 +132,7 @@ const Consultation = () => {
               </select>
             </div>
             <div>
-              <label html For="message" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                 Project Details
               </label>
               <textarea

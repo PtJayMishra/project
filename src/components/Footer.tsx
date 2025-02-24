@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code2, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Code2, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center mb-4">
               <Code2 className="h-8 w-8 text-indigo-400" />
-              <span className="ml-2 text-xl font-bold">WebCraft</span>
+              <span className="ml-2 text-xl font-bold">Paryatana</span>
             </Link>
             <p className="text-gray-400">
               Empowering businesses with innovative digital solutions that drive growth and success.
@@ -44,30 +44,28 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400">123 Business Street</li>
-              <li className="text-gray-400">City, State 12345</li>
-              <li className="text-gray-400">contact@webcraft.com</li>
-              <li className="text-gray-400">(555) 123-4567</li>
+              <li className="text-gray-400"> Maple tree Bhopal</li>
+              <li className="text-gray-400"> Madhya Pradesh 462033</li>
+              <li className="text-gray-400">contact@paryatana.com</li>
+              <li className="text-gray-400"> +91 8223902584</li>
             </ul>
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+             
+              <a href="https://x.com/0xJayMishra" className="text-gray-400 hover:text-white">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.linkedin.com/in/jay-mishra-21b17b200/" className="text-gray-400 hover:text-white">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <Instagram className="h-5 w-5" />
+              <a href="https://github.com/PtJayMishra" className="text-gray-400 hover:text-white">
+                <Github className="h-5 w-5" />
               </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} WebCraft. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Paryatana. All rights reserved.</p>
         </div>
       </div>
     </footer>

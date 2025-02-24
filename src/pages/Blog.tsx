@@ -53,7 +53,7 @@ const blogPosts = [
     excerpt: 'Explore the latest trends shaping the future of web development, from AI integration to advanced user experiences.',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
     date: 'Mar 15, 2025',
-    author: 'David Anderson',
+    author: 'Jay Mishra',
     link: '#'
   },
   {
